@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="h-full dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Todo</title>
+
+    <meta name="description" content="A simple and minimal todo" />
+    <meta
+      name="keywords"
+      content="todo app, minimal todo, pwa todo, task manager, localstorage todo, simple todo app, sagarkemble, sagar kemble, sagarkemble.dev, todo.sagarkemble"
+    />
+    <meta name="author" content="Sagar" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.png" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="src/variables.css" />
+    <link rel="stylesheet" href="src/style.css" />
+
+    <meta property="og:title" content="Todo - One task at a time" />
+    <meta property="og:description" content="A simple and minimal todo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/favicon.png" />
+    <meta property="og:url" content="https://todo.sagarkemble.dev" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Todo - One task at a time" />
+    <meta name="twitter:description" content="A simple and minimal todo" />
+    <meta name="twitter:image" content="/favicon.png" />
+
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <link rel="canonical" href="https://todo.sagarkemble.dev" />
+  </head>
+  <body
+    class="flex flex-col h-full bg-background px-6 py-44 items-center gap-4"
+  >
+    <div
+      class="hero-section w-full flex sm:max-w-[25rem] lg:max-w-[27.5rem] flex-col gap-3 items-center"
+    >
+      <div
+        class="heading-wrapper flex flex-col gap-0 items-center hover:cursor-pointer"
+      >
+        <h1 class="font-semibold text-2xl" id="gretting">Hola Sagar !</h1>
+        <p class="text-muted-foreground" id="tag-line">One task at a time.</p>
+      </div>
+      <form id="task-form" class="flex gap-2 w-full">
+        <input
+          id="task-input"
+          class="w-full input"
+          type="text"
+          placeholder="Enter task"
+        />
+        <button
+          id="add-task-btn"
+          type="submit"
+          class="shrink-0 btn btn-primary"
+        >
+          Add Task
+        </button>
+      </form>
+    </div>
+
+    <div
+      class="task-list-container w-full h-full sm:max-w-[25rem] lg:max-w-[27.5rem] relative overflow-hidden"
+    >
+      <ul
+        class="task-list w-full h-full relative overflow-y-scroll hide-scrollbar"
+      ></ul>
+      <div
+        class="overlay h-9 w-full absolute bottom-0 left-0 z-20 bg-white"
+      ></div>
+    </div>
+
+    <script src="src/script.js" type="module"></script>
+  </body>
+</html>
