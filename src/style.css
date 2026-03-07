@@ -23,7 +23,7 @@ body {
   outline: none;
 }
 
-.btn:focus {
+.btn:focus-visible {
   outline: 0.125rem solid var(--ring);
   box-shadow:
     0 0 0 0.125rem var(--ring),
@@ -35,7 +35,7 @@ body {
   color: var(--primary-foreground);
 }
 
-.btn-primary:hover {
+.btn-primary:active {
   background-color: oklch(from var(--primary) l c h / 0.8);
 }
 
@@ -62,7 +62,7 @@ body {
   color: var(--muted-foreground);
 }
 
-.input:focus {
+.input:focus-visible {
   outline: none;
   border-color: var(--ring);
   box-shadow: 0 0 0 0.0625rem var(--ring);
@@ -92,11 +92,11 @@ body {
   transition: all 0.15s ease;
 }
 
-.checkbox:hover {
+.checkbox:active {
   border-color: var(--ring);
 }
 
-.checkbox:focus {
+.checkbox:focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.0625rem var(--ring);
 }
@@ -138,7 +138,19 @@ body {
   font-family: var(--font-sans);
   transition: all 0.15s ease;
 }
-.task:hover {
+@media (hover: hover) {
+  .task:hover {
+    background: var(--popover);
+    border-color: var(--ring);
+  }
+  .btn-primary:hover {
+    background-color: oklch(from var(--primary) l c h / 0.8);
+  }
+  .checkbox:hover {
+    border-color: var(--ring);
+  }
+}
+.task:active {
   background: var(--popover);
   border-color: var(--ring);
 }
