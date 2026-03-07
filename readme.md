@@ -2,7 +2,7 @@
   class="container"
   align="center"
 >
- <img src="public/bg-favicon.png" style="height:5rem"/>
+ <img src="public/favicon.png" style="height:5rem"/>
 
 # Todo
 

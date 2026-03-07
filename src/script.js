@@ -185,11 +185,3 @@ function fadeIn(element, time = 0.2) {
     });
   });
 }
-
-let deferredPrompt;
-
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById("installBtn").style.display = "block";
-});
