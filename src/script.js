@@ -33,7 +33,6 @@ const greetingsArr = [
   "Ahoj",
   "Sawasdee",
   "Kamusta",
-  "Privet",
 ];
 const taglinesArr = [
   "One task at a time",
